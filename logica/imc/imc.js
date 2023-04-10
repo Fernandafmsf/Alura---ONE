@@ -28,3 +28,10 @@ function geraCodigo (letra, n1, n2){
 
   var codigo = geraCodigo("A", 20,30)
   mostra(codigo);
+
+  var nome = prompt("Informe seu nome")
+  var alturaInformada = prompt(nome+ ", informe sua altura: ");
+  var pesoInformado = prompt(nome+ ", informe seu peso: ");
+
+  var imc = calculaImc(pesoInformado, alturaInformada);
+  mostra("<h3>" +nome+", seu IMC é: " +imc+"</h3>");
