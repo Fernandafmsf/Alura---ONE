@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de advinhação</title>
+</head>
+<body>
+
+  <script>
+    function pulaLinha(){
+      document.write("<br><br>");
+    }
+
+    function mostra(frase){
+      document.write(frase);
+      pulaLinha();
+    }
+
+    function gerarNumero(){
+      var n= Math.round(Math.random()*100);
+      return n;
+    }
+
+    function sorteia(x){
+      var numeroSorteado = Math.round(Math.random()*x);
+      return numeroSorteado;
+    }
+
+    var numeroAleatorio = gerarNumero(); // lembrar de atribuir o valor da função a uma variável fora dela, para nao ter que ficar botando a função dentro de um "document.write", por exemplo. Sempre manter o padrão de referenciar variaveis
+    var numeroPensado = parseInt(prompt("Chute um número de 1 a 100"));
+
+    if(numeroPensado!= gerarNumero()){
+      mostra("Errou, o número é: "+ gerarNumero())
+    }else{
+      mostra("Você acertou!")
+    }
+
+    //SORTEIO 
+    var numero=parseInt(prompt("Insira um número para gerarmos um sorteio"));
+    var numeroDoSorteio= sorteia(numero);
+    mostra("O número sorteado é: "+numeroDoSorteio);
+
+  </script>
+  
+</body>
+</html>

@@ -10,12 +10,32 @@
 
   <script>
 
-      var vitorias = parseInt(prompt("Informe o número de vitórias do time:")) ;
+    function mostra(frase){
+      document.write(frase);
+      document.write("<br><br>");
+    }
+
+    function compararDesempenho(){
+      if (pontos>pontosAnoPassado){
+        resultado="Seu time está melhor que no ano passado";
+      } else if (pontos<pontosAnoPassado){
+        resultado="Seu time está pior que no ano passado";
+      } else {
+        resultado= "Seu time está igual ao ano passado"; 
+      }
+      return resultado;
+    } 
+
+      var vitorias = parseInt(prompt("Informe o número de vitórias do time:")) ; //o parseInt transforma a string que vem como retorno da função prompt em número
       var empates = parseInt(prompt("Informe o número de empates")) ; 
+      var pontosAnoPassado = parseInt(prompt("Quantos pontos seu time fez ano passado?"));
 
       var pontos = vitorias*3 + empates;
 
-      alert (pontos);
+      mostra("Seu time fez: "+pontos+" pontos");
+      mostra(compararDesempenho());
+
+     
 
   </script>
   
