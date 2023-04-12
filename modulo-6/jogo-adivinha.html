@@ -29,18 +29,37 @@
     }
 
     var numeroAleatorio = gerarNumero(); // lembrar de atribuir o valor da função a uma variável fora dela, para nao ter que ficar botando a função dentro de um "document.write", por exemplo. Sempre manter o padrão de referenciar variaveis
-    var numeroPensado = parseInt(prompt("Chute um número de 1 a 100"));
 
-    if(numeroPensado!= gerarNumero()){
-      mostra("Errou, o número é: "+ gerarNumero())
-    }else{
-      mostra("Você acertou!")
+    var tentativas= 3; 
+
+    var numeroPensado = Math.round(Math.random()*10);
+
+    while(tentativas >=1 ) {
+      var chute = parseInt(prompt("Digite seu chute"));
+      tentativas--;
+      if(chute == numeroPensado){
+        alert("Você acertou");
+        break;
+      } else if (tentativas!=0){
+        alert("Você errou, você ainda tem " + tentativas + " tentativas!");
+      } else {
+        alert("Você errou!");
+      }
+      
     }
 
+    //var numeroPensado = parseInt(prompt("Chute um número de 1 a 100"));
+
+    //if(numeroPensado!= gerarNumero()){
+    //  mostra("Errou, o número é: "+ gerarNumero())
+    //}else{
+    //  mostra("Você acertou!")
+    //}
+
     //SORTEIO 
-    var numero=parseInt(prompt("Insira um número para gerarmos um sorteio"));
-    var numeroDoSorteio= sorteia(numero);
-    mostra("O número sorteado é: "+numeroDoSorteio);
+    //var numero=parseInt(prompt("Insira um número para gerarmos um ///sorteio"));
+   // var numeroDoSorteio= sorteia(numero);
+   // mostra("O número sorteado é: "+numeroDoSorteio);
 
   </script>
   
