@@ -18,7 +18,9 @@
   <script>
 
    //criar um input para verificar se o valor digitado condiz com o array que possui 4 valores
-    var segredos = [5,7,10,2];
+    var segredos = [];
+    segredos.push(Math.round(Math.random()*10));
+
     var input = document.querySelector("input");
     var botao = document.querySelector("button");
     input.focus();
