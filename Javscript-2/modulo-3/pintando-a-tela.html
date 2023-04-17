@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pintando a tela</title>
+</head>
+<body>
+
+  <canvas width="600" height="400"></canvas>
+  <br>
+  <label for="cor">Escolha uma cor</label>
+  <input type="color" name="cor" id="input-cor">
+  
+  
+  <script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    var mouse = false;
+    var cor = document.querySelector('input');
+
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+      
+    function pintaTela(evento) {
+      
+      var x = evento.pageX - tela.offsetLeft;
+      var y = evento.pageY - tela.offsetTop;
+
+      if(mouse){
+        pincel.fillStyle = cor.value;
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(x + ',' + y);
+      }
+
+      console.log(mouse);
+      
+    }
+  
+      tela.onmousemove = pintaTela;
+
+    tela.onmousedown = function (){
+      mouse=true;
+    }
+
+    tela.onmouseup = function (){ // essa é a chamada função anônima, que é quando criamos uma função sem nome. Por ela ser anônima, não poderá ser chamada, mas pode ser atribuída ao evento dessa forma
+      mouse=false;
+    }
+      
+   
+  </script>
+  
+</body>
+</html>
