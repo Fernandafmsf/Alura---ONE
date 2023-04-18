@@ -28,20 +28,13 @@
       var x = evento.pageX - tela.offsetLeft;
       var y = evento.pageY - tela.offsetTop;
 
-
        if (evento.shiftKey && evento.altKey) {
-
         alert('Só aperte uma tecla por vez, por favor!');
-
       } else if (evento.shiftKey && raio + 10 <= 40) {
         raio = raio + 10;
-
       } else if (evento.altKey && raio - 5 >= 10) {
         raio = raio - 5;
-
       }
-
-
 
       pincel.fillStyle = cores[indiceCorAtual];
       pincel.beginPath();
@@ -51,15 +44,18 @@
 
     tela.onclick = desenhaCirculo;
 
-    function mudaCor() {
+    function mudaCor() { // de acordo com o clique do botão direito, muda a cor da bolinha 
       indiceCorAtual++
+
       if (indiceCorAtual >= cores.length) {
+
         indiceCorAtual = 0;
       }
       alert('funcionou!');
       return false;
     }
-    tela.oncontextmenu = mudaCor;
+
+    tela.oncontextmenu = mudaCor; // vai captar o clique com o botão direito do mouse e executar a função mudaCor, que irá fazer essa alteração graças à var. indiceCorAtual 
 
 
   </script>

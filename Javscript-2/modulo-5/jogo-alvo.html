@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usando teclas </title>
+</head>
+
+<body>
+  <canvas width="600" height="400"></canvas>
+
+  <script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    var raio = 10;
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+      pincel.fillStyle = cor;
+      pincel.beginPath();
+      pincel.arc(x, y, raio, 0, 2 * Math.PI);
+      pincel.fill();
+    }
+
+    function limpaTela() {
+
+      pincel.clearRect(0, 0, 600, 400);
+    }
+
+    function desenhaAlvo(x,y){
+      desenhaCirculo(x, y, raio + 20, 'red');
+      desenhaCirculo(x, y, raio + 10, 'white');
+      desenhaCirculo(x, y, raio, 'red');
+    
+      console.log(x);
+    }
+
+    //gera números aleatorios para o posicionamento do alvo. Vale relemebrar que é possível passar um parâmetro como 'maximo' para captá-lo e utilizar na multiplicação na função 
+    function sorteiaPosicao(maximo){
+
+      return Math.floor(Math.random()*maximo);
+
+    }
+
+    function atualizaTela(){
+      limpaTela();
+      var xAleatorio = sorteiaPosicao(600); //guarda os parâmetros de acordo com o valor máximo, que correspondem a altura e largura do canvas 
+      var yAleatorio = sorteiaPosicao(400);
+
+      desenhaAlvo(xAleatorio, yAleatorio); // passa os parâmetros para gerar o alvo em lugares aleatorios 
+    }
+    
+   setInterval(atualizaTela, 600);
+
+
+  </script>
+
+</body>
+
+</html>

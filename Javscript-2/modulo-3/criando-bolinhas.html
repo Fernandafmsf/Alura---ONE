@@ -20,6 +20,9 @@
       pincel.fillStyle='black';
       pincel.fillRect(0,0,600,400);
 
+
+      //esse código vai aumentar a cor da bolinha de acordo com o botão direito do mouse e aumentar a bolinha de tamanho em 10 quando shift é pressionado. Vale ressaltar que nesse código, só aumenta uma vez e toda vez que pararmos de clicar, a bolinha voltará ao tamanho normal. Isso acontece porque declaramos a var raio dentro da função, ou seja, ela será reiniciada toda vez que a função for chamada, e ela é chamada toda vez que clicamos na tela. 
+
       function desenhaCirculo(evento){
 
         var x = evento.pageX - tela.offsetLeft;
