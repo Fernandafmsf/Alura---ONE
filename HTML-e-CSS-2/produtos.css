@@ -30,3 +30,31 @@ nav a {
 nav a:hover{
   border-bottom: 5px solid #ffff00;
 }
+
+.produtos{
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.produtos li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 30%;
+}
+
+.produtos h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.produto-descricao{
+  font-size: 18px;
+}
+
+.produto-preco{
+  font-size: 22px;
+  font-weight: bold;
+}
+
