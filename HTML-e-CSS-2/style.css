@@ -162,6 +162,7 @@ th {
   font-size: 2em;
   text-align: center;
   margin: 0 0 1em;/*botar uma margem sempre proporcional ao tamanho da fonte do elemento*/
+  clear: left; /* evita o efeito do float*/
 }
 
 .principal p {
@@ -178,4 +179,10 @@ th {
 
 .imgbeneficios{
   width: 60%;
+}
+
+.utensilios{
+  width: 120px;
+  float: left;
+  margin: 0 20px 20px 0;
 }
