@@ -5,6 +5,42 @@ p{
   text-align: center;
 }
 
+header {
+  background: #BBBBBB;
+}
+
+.caixa {
+  width: 940px;
+  position: relative;
+  margin: 0 auto;
+  /*centraliza a div*/
+}
+
+nav {
+  position: absolute;
+  top: 110px;
+  right: 0;
+
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+  /*aplicando margem no lado esquerdo*/
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #C78C19;
+}
+
 #banner{
   width: 100%;
 }
