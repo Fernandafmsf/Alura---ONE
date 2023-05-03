@@ -1,0 +1,110 @@
+body *{
+  font-family: arial;
+}
+p{
+  text-align: center;
+}
+
+header {
+  background: #BBBBBB;
+}
+
+.caixa {
+  width: 940px;
+  position: relative;
+  margin: 0 auto;
+  /*centraliza a div*/
+}
+
+nav {
+  position: absolute;
+  top: 110px;
+  right: 0;
+
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+  /*aplicando margem no lado esquerdo*/
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #C78C19;
+}
+
+#banner{
+  width: 100%;
+}
+
+#missao{
+  font-size: 20px;
+}
+
+.titulo-principal{
+  padding-left: 20px;
+
+}
+
+.cabecalho{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li{
+  display: inline;
+  margin-left: 10px;
+}
+nav a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+}
+
+nav a:hover{
+  color: #C79C19;
+}
+
+.principal{
+  background: #cccccc;
+  padding: 30px;
+}
+
+.titulo-centralizado{
+  text-align: center;
+}
+
+.beneficios{
+  background: #FFFFFF;
+  padding: 20px;
+}
+
+
+
+.itens{
+  font-style: italic ;
+}
+
+.lista-itens{
+  display: inline-block; /*pesquisar melhor sobre essa propriedade*/
+  vertical-align: top; /*alinha o texto em cima*/
+  width: 20%;
+  margin-right: 15%;
+}
+
+.imgbeneficios{
+  width: 50%;
+}
+
+strong{
+  color: red;
+}
