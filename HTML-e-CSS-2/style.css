@@ -1,5 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  height: 100vh;
 }
 
 header{
@@ -91,6 +92,11 @@ form {
   margin: 40px 0;
 }
 
+.formulario{
+  width: 940px;
+  margin: 0 auto;
+}
+
 form label,
 form p,
 form legend {
@@ -149,7 +155,7 @@ thead {
 td,
 th {
   border: 1px solid black;
-  padding: 8px 15px;
+  padding: 8px 25px;
 }
 
 /*CSS DA PÁGINA PRINCIPAL*/
@@ -163,6 +169,7 @@ th {
   text-align: center;
   margin: 0 0 1em;/*botar uma margem sempre proporcional ao tamanho da fonte do elemento*/
   clear: left; /* evita o efeito do float*/
+  text-shadow: 2px 2px #FF0000;
 }
 
 .principal p {
@@ -181,6 +188,7 @@ th {
   width: 60%;
   opacity: 1;
   transition: 400ms;
+  box-shadow: 10px 10px 10px 0 #000000;
 }
 .imgbeneficios:hover{
   opacity: 0.3;
@@ -271,4 +279,56 @@ main > p {
   background: orange;
 }
 */
+
+@media  (max-width: 480px){
+
+  .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{ 
+    width: auto;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  nav{
+    position: static;
+    text-align: center;
+    padding: 20px 0 20px 0 ;
+  }
+  .imgbeneficios, .lista-itens{
+    width: 100%;
+    padding-bottom: 2em;
+  }
+
+ 
+
+  .produtos li {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 0 4em;
+  }
+
+  form{
+   width: 100%;
+   margin-left: 0.5em ;
+  }
+
+  .input-padrao{
+    width: 75%;
+    
+  }
+
+  .enviar{
+    width: auto;
+    padding: 1em;
+  }
+
+  table{
+    margin-left: 3em;
+  }
+
+
+}
+  
+
 
