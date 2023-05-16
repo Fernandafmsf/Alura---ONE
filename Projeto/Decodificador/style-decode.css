@@ -1,0 +1,42 @@
+body *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: inter, sans-serif;
+  background: #F3F5FC;
+}
+
+.exibidor-de-texto{
+  background-color: #FFFFFF;
+  border-radius: 2em;
+  padding: 2em;
+
+  text-align: center;
+}
+
+@media  (max-width:740px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    height: 30vh;
+  }
+
+  .exibidor-de-texto{
+    margin: 10px 15px 40px 15px;
+  }
+
+  .exibidor-de-texto img{
+    display: none;
+  }
+  
+}
