@@ -2,11 +2,37 @@ body *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inter, sans-serif;
 }
 
 body{
-  font-family: inter, sans-serif;
+  
   background: #F3F5FC;
+}
+
+form textarea {
+  border-style: none;
+  resize: none;
+  background: #F3F5FC;
+
+  font-family: inter;
+}
+
+form button{
+  border-radius: 1.5em;
+  border: 2px solid #0A3871;
+  padding: 1.5em;
+
+}
+
+.cripto {
+  color: #FFFFFF;
+  background-color: #0A3871;
+}
+  
+.descripto {
+  color: #0A3871;
+  background-color: #D8DFE8;
 }
 
 .exibidor-de-texto{
@@ -17,26 +43,60 @@ body{
   text-align: center;
 }
 
+@media (max-width:1000px){
+
+
+
+
+  .exibidor-de-texto img {
+      display: none;
+    }
+
+}
+
+
 @media  (max-width:740px) {
   main{
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    
+  }
+
+  .logo{
+    margin: 0.8em ;
   }
 
   form {
     display: flex;
     flex-direction: column;
+    margin: 0.5em;
+    height: 60vh;
+  }
 
-    height: 30vh;
+  form textarea{
+    font-size: 25px;
+  }
+
+  .mensagem-atencao{
+    font-size: 16px;
+    margin: 0.5em;
+  }
+
+  form button{
+    margin: 0.3em 0em;
+    font-size: 20px;
+    padding: 1.3em;
   }
 
   .exibidor-de-texto{
-    margin: 10px 15px 40px 15px;
+    margin: 0.5em 0.3em;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  
   }
 
-  .exibidor-de-texto img{
-    display: none;
+  .inserir-mensagem{
+    font-size: 18px;
   }
   
 }
+

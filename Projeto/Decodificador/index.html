@@ -22,17 +22,17 @@
 
       <form action="">
 
-          <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Digite sua mensagem" class="entrada-texto" required></textarea>
+          <textarea name="texto" id="texto" cols="200" rows="10" placeholder="Digite sua mensagem" class="entrada-texto" required autofocus></textarea>
 
           <div class="mensagem-atencao">
             <img src="assets/atention.png" alt="Logo de atenção">
             <span>Apenas letras minúsculas e sem acento.</span>
           </div>
          
-          <button type="submit" onclick="criptografar">
+          <button type="submit" class="cripto" onclick="criptografar">
           Criptografar</button>
 
-          <button type="submit" onclick="descriptografar">
+          <button type="submit" class="descripto" onclick="descriptografar">
           Descriptografar</button>
 
       </form>
